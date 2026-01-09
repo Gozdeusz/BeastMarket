@@ -1,47 +1,159 @@
 # BeastMarket
-Student Project - 2.5D Action-Economy Game 
 
-The project is in production, will be periodically updated
+**BeastMarket** is a **2.5D Action–Economy game** developed as a **student project** by a team of three people.  
+The project is currently in *concept demo* and will be developed in the future.
 
-Project created by a team of 3 people 
-I'm in charge of the directing, design, UI and equipment and some gameplay elements
+---
 
-[EN]
-The game's assumptions:
+## 📌 Game Concept
 
-Gameplay is based on two modes - store mode and hunt mode.
+The player runs a shop that sells items crafted from materials obtained by hunting monsters.  
+Since the player operates a business, they must **pay taxes regularly**.  
+The game continues indefinitely until the player dies during a hunt or is unable to pay taxes.
 
-Store mode: the player has access to the backroom and the lobby. In the backroom the player prepares items. In the lobby, the player has access to displays on which he places items for sale. In this mode it is possible to open a store, which starts the process of selling and the appearance of interested NPCs. 
+Gameplay is divided into **two main sequences**:
+- shop management
+- monster hunting
 
-After the time has passed, night falls, the store closes and the player can decide what he wants to do the next day: go hunting or sell in the store. 
+These two activities cannot be performed at the same time, forcing the player to **plan each day carefully**.
 
-Hunting mode: the player starts in the store where he can only prepare the items before the journey and go hunting. He chooses a hunting spot and sets out to hunt. The hunting area is divided into regions and smaller sections with monsters of different difficulty levels and defeating a boss unlocks another region. At any time the player can return to the store, ending the day and deciding what he wants to do in the next one.
+---
 
-The player plays indefinitely until he dies on the hunt or is unable to pay taxes for running the business.
+## 🏪 Store Mode
 
-[PL]
-Zalozenia gry:
+The store consists of two main areas:
 
-Gameplay opiera sie na dwoch trybach - tryb sklepu oraz tryb polowania.
+### Backroom
+- crafting items for sale
+- crafting or upgrading equipment for the player
 
-Tryb sklepu: gracz ma dostep do zaplecza oraz holu. Na zapleczu gracz przygotowuje przedmioty. W holu gracz ma dostep do wystawek na ktorych umieszcza przedmioty do sprzedazy. W tym trybie istnieje mozliwosc otwarcia sklepu co zaczyna poces sprzedazy i pojawianie sie zainteresowanych NPC. 
+### Main Hall
+- placing items on dedicated exhibition stands
+- opening the shop, which starts the trading day
 
-Po uplywie czasu nastaje noc, sklep sie zamyka a gracz moze zdecydowac co chce robic nastepnego dnia: isc na polowanie czy sprzedawac w sklepie. 
+When the shop is open:
+- NPC customers arrive
+- each customer has:
+  - a limited amount of money
+  - personal preferences and tastes
+  - quality requirements
+- customers buy items only if:
+  - the item matches their preferences
+  - the quality meets their expectations
+  - they can afford it
 
-Tryb polowania: gracz rozpoczyna w sklepie gdzie moze tylko pzygotowac przedmioty przed podoza oraz wyruszyc na polowanie. Wybiera miejsce polowania i rusza na nie. Obszar polowania dzieli sie na regiony oraz pomniejsze sekcje w ktorych wystepuja potwory o roznych poziomach trudnosci a pokonanie bossa odblokowywuje kolejny region. W każdej chwili gracz moze wrocic do sklepu konczac dzien i posatanawiajac co chce robic w kolejnym.
+Some customers are **special NPCs**:
+- initiate unique interactions
+- introduce quest elements
+- expand the world lore
 
-Gracz gra w nieskonczonosc dopoki nie umrze na polowaniu lub nie bedzie w stanie zaplacic podatkow za prowadzenie firmy.
+Additional systems:
+- **trend / fashion system** (some items become more popular than others)
+- kingdom events affecting the economy
+- information gathered through:
+  - morning newspapers
+  - conversations with customers
 
+At the end of the day:
+- the shop closes
+- the player prepares items for the next day or for hunting
 
-# View-Only License
+---
 
-Copyright (c) 2025 Mateusz Gozdek, Oskar Firlej, Mateusz Fundowicz
+## ⚔️ Hunting Mode
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to view and study the Software for personal and educational purposes, subject to the following conditions:
+When choosing to hunt:
+- the player starts in the shop
+- the shop cannot be opened
+- only preparation in the backroom is possible
 
-1. Redistribution of the Software, in whole or in part, in any form, is strictly prohibited without explicit written permission from the copyright holder.
-2. Modification and use of the Software for personal projects is allowed, but any derivative works must remain private and cannot be shared or distributed.
-3. The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-4. The Software is provided "as is", without warranty of any kind, express or implied, including but not limited to the warranties of merchantability, fitness for a particular purpose, and noninfringement. In no event shall the authors be liable for any claim, damages, or other liability arising from or in connection with the Software or its use.
+The player then selects a hunting area from the world map.
 
-By accessing this Software, you agree to abide by these terms.
+Hunting areas:
+- semi-open regions connected by smaller zones
+- enemies with increasing difficulty
+- each region contains a boss
+- defeating a boss unlocks a new region
+
+Exploration features:
+- environmental puzzles
+- obstacles and challenges
+- varied regions to diversify gameplay
+
+The player can hunt freely, limited only by:
+- backpack capacity
+- inventory upgrades increasing carrying capacity
+
+Returning to the shop ends the day.
+
+---
+
+## 🎨 Visual Style
+
+The game is visually inspired by the **HD-2D style** known from Square Enix titles  
+(e.g. *Octopath Traveler*).
+
+---
+
+## 🚧 Project Status
+
+This description presents a **wider vision** of the game's design. 
+The current build includes a **partial implementation** of these mechanics, developed within the scope of a university *Game Programming* course.
+
+---
+
+## 👤 My Role in the Project
+
+**Responsibilities:**
+- original game concept
+- team coordination and direction
+- UI design
+- UI and enemy graphics
+
+**Technical contributions:**
+- item system
+- inventory system
+- UI systems
+
+### Inventory System
+Inspired by *Kingdom Come: Deliverance*:
+- items are categorized by type and quality
+- when picking up an item:
+  - its type is detected
+  - it is placed in the corresponding container
+  - if an item with the same name and quality exists → its quantity is increased
+  - otherwise, a new entry is created
+- the same logic applies to dropping items
+
+### Crafting System
+- each craftable item has a recipe
+- the system checks:
+  - item type and name
+  - ignores ingredient quality
+- if quantities match:
+  - a new item with a predefined quality is crafted
+
+---
+
+### Defeating an Enemy
+![Defeat Enemy](screenshots/defeat-enemy.png)
+
+### Shop Interior
+![Shop](screenshots/shop.png)
+
+### Inventory System
+![Inventory](screenshots/inventory.png)
+
+### Crafting
+![Crafting](screenshots/crafting.png)
+
+### Hunting Area
+![Hunting Field](screenshots/hunt-field.png)
+
+### Exhibiting Items
+![Exhibit Item](screenshots/exibit-item.png)
+
+### End of the Day
+![End Day](screenshots/end-day.png)
+
+*Created by: Mateusz Gozdek, Oskar Firlej, Mateusz Fundowicz*
